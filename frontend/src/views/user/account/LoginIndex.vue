@@ -33,7 +33,6 @@ async function handleLogin(){
         errorMessage.value = data.result
       }
     }catch (err){
-      console.log(err)
     }
   }
 }
