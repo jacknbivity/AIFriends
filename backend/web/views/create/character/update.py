@@ -15,8 +15,10 @@ class UpdateCharacterView(APIView):
             character = Character.objects.get(id=character_id, author__user=request.user)
             name = request.data['name'].strip()
             profile = request.data['profile'].strip()[:100000]
-            photo = request.FILES.get('background_image', None)
-            background_image = request.data.get('background_image', None)
+            # 头像文件从 "photo" 字段上传
+            photo = request.FILES.get('photo', None)
+            # 聊天背景从 "background_image" 字段上传
+            background_image = request.FILES.get('background_image', None)
             if not name:
                 return Response({
                     'result': '名字不能为空',
