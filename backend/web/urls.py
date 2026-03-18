@@ -1,10 +1,9 @@
 from django.urls import path, re_path
 
-from web.models.user import UserProfile
-from web.views.character.remove import RemoveCharacterView
-from web.views.character.update import UpdateCharacterView
-from web.views.character.get_single import GetSingleCharactorView
-from web.views.character.create import CreateCharacterView
+from web.views.create.character.remove import RemoveCharacterView
+from web.views.create.character.update import UpdateCharacterView
+from web.views.create.character.get_single import GetSingleCharactorView
+from web.views.create.character.create import CreateCharacterView
 from web.views.index import index
 from web.views.user.account.get_user_info import GetUserInfo
 from web.views.user.account.login import LoginAPIView
